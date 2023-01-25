@@ -12,18 +12,36 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Hello, World</h1>
-
     <!--Need to activate Handlebars script-->
-    <h2 class="gitTest">{{name}}</h2>
+    <div class="container-fluid">
+      <h2 class="row gitTest"></h2>
+      <h2 class="row repoTest"></h2>
+    </div>
 
     <script id="left-side-info" type="text/x-handlebars-template">
       <div class="card col-md-3" style="width: 18rem;">
         <img class="card-img-top" src={{avatar_url}} alt="Card image cap" />
         <div class="card-body">
           <h5 class="card-title">{{name}}</h5>
+          <h6 class="card-title">{{login}}</h6>
+          <h6 class="card-title">Followers: {{followers}}</h6>
+          <p class="card-text">{{location}}</p>
         </div>
       </div>
+    </script>
+
+    <script id="right-side-info" type="text/x-handlebars-template">
+      {{#each this}}
+        <div class="card col-md-3" style="width: 18rem;">
+          <img class="card-img-top" src={{avatar_url}} alt="Card image cap" />
+          <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <h6 class="card-title">{{login}}</h6>
+            <h6 class="card-title">Followers: {{data.length}}</h6>
+            <p class="card-text">{{location}}</p>
+          </div>
+        </div>
+      {{/each}}
     </script>
 
     <script
