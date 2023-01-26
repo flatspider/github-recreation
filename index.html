@@ -13,8 +13,8 @@
   </head>
   <body>
     <!--Need to activate Handlebars script-->
-    <div class="container-fluid">
-      <h2 class="row gitTest"></h2>
+    <div class="container">
+      <h2 class="col-xs-6 gitTest"></h2>
       <h2 class="row repoTest"></h2>
     </div>
 
@@ -32,8 +32,7 @@
 
     <script id="right-side-info" type="text/x-handlebars-template">
       {{#each this}}
-        <div class="card col-md-3" style="width: 18rem;">
-          <img class="card-img-top" src={{avatar_url}} alt="Card image cap" />
+        <div class="card col-lg-12 mt-1" style="width: 38rem;">
           <div class="card-body">
             <h5 class="card-title">{{name}}</h5>
             <h6 class="card-title">{{login}}</h6>
